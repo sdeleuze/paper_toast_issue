@@ -1,0 +1,28 @@
+<!-- import polymer-element's definition -->
+<link rel="import" href="packages/polymer/polymer.html">
+<link rel="import" href="packages/paper_elements/paper_toast.html">
+
+<polymer-element name="click-counter" attributes="count">
+  <template>
+    <style>
+      div {
+        font-size: 24pt;
+        text-align: center;
+        margin-top: 140px;
+      }
+      button {
+        font-size: 24pt;
+        margin-bottom: 20px;
+      }
+    </style>
+    <div>
+    <paper-toast id="sendSnapStartToast" text="Start sending your Snap"></paper-toast>
+    <paper-toast id="sendSnapCompletedToast" text="You Snap has been sent"></paper-toast>
+    
+      <button on-click="{{increment}}">Click me</button><br>
+      <span>(click count: {{count}})</span>
+    </div>
+  </template>
+  <script type="application/dart" src="clickcounter.dart"></script>
+</polymer-element>
+
